@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowMultiMode</class>
+ <widget class="QMainWindow" name="MainWindowMultiMode">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1616</width>
+    <height>753</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ViAnalyserCompare</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_ratio2">
+      <property name="text">
+       <string>%</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Metric Value:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>790</width>
+           <height>601</height>
+          </rect>
+         </property>
+         <widget class="QLabel" name="label_img1">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>749</width>
+            <height>561</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>img1</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_ratio1">
+      <property name="text">
+       <string>%</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QScrollArea" name="scrollArea_2">
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>789</width>
+           <height>601</height>
+          </rect>
+         </property>
+         <widget class="QLabel" name="label_img2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>749</width>
+            <height>561</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>img2</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1616</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHeatmap">
+    <property name="title">
+     <string>Heatmap</string>
+    </property>
+    <addaction name="actionDiff_R_Map"/>
+    <addaction name="actionDiff_G_Map"/>
+    <addaction name="actionDiff_B_Map"/>
+    <addaction name="actionDiff_Y_Map"/>
+   </widget>
+   <widget class="QMenu" name="menuMetric">
+    <property name="title">
+     <string>Metric</string>
+    </property>
+    <addaction name="actionPSNR"/>
+    <addaction name="actionSSIM"/>
+    <addaction name="actionVMAF"/>
+   </widget>
+   <widget class="QMenu" name="menuOpen">
+    <property name="title">
+     <string>Open</string>
+    </property>
+    <addaction name="actionOpen_Files"/>
+   </widget>
+   <addaction name="menuOpen"/>
+   <addaction name="menuHeatmap"/>
+   <addaction name="menuMetric"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionDiff_R_Map">
+   <property name="text">
+    <string>Diff-R-Map</string>
+   </property>
+  </action>
+  <action name="actionDiff_G_Map">
+   <property name="text">
+    <string>Diff-G-Map</string>
+   </property>
+  </action>
+  <action name="actionDiff_B_Map">
+   <property name="text">
+    <string>Diff-B-Map</string>
+   </property>
+  </action>
+  <action name="actionDiff_Y_Map">
+   <property name="text">
+    <string>Diff-Y-Map</string>
+   </property>
+  </action>
+  <action name="actionPSNR">
+   <property name="text">
+    <string>PSNR</string>
+   </property>
+  </action>
+  <action name="actionSSIM">
+   <property name="text">
+    <string>SSIM</string>
+   </property>
+  </action>
+  <action name="actionVMAF">
+   <property name="text">
+    <string>VMAF</string>
+   </property>
+  </action>
+  <action name="actionOpen_Files">
+   <property name="text">
+    <string>Open Files</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

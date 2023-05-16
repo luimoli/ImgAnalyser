@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1434</width>
+    <height>916</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ViAnalyser</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="2" column="1">
+     <widget class="QGroupBox" name="groupBox_neib">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="title">
+       <string>Neighbor</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_mark1">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Show:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="spinBox_range">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>15</number>
+         </property>
+         <property name="value">
+          <number>4</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" colspan="2">
+        <widget class="QComboBox" name="cbb_neib_show">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <item>
+          <property name="text">
+           <string>no</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>yes</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_neib_sd">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>STD:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_neib_range">
+         <property name="text">
+          <string>Neighbor Radius:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_neib_sd">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_neib_avg_Y">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>AVG Y:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEdit_neib_avg_Y"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="3">
+     <widget class="QGroupBox" name="groupBox_img">
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="0" colspan="10">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>1040</width>
+              <height>765</height>
+             </rect>
+            </property>
+            <widget class="QLabel" name="label_img">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>1001</width>
+               <height>661</height>
+              </rect>
+             </property>
+             <property name="mouseTracking">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
+             <property name="lineWidth">
+              <number>1</number>
+             </property>
+             <property name="text">
+              <string>open file or drag here</string>
+             </property>
+             <property name="margin">
+              <number>0</number>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="8">
+        <widget class="QLabel" name="label_ratio">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>%</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="10">
+        <widget class="QLabel" name="label_file_path">
+         <property name="text">
+          <string>FilePath:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="9">
+        <widget class="QComboBox" name="cbb_resize">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <property name="currentText">
+          <string>cubic</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>cubic</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>nearest</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>bilinear</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_img_shape">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="2">
+        <widget class="QLabel" name="label_rgb">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3" colspan="2">
+        <widget class="QLabel" name="label_real_pos">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QGroupBox" name="groupBox_ROI">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="title">
+       <string>ROI</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_ROI_avg_RGB">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>AVG RGB:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QPushButton" name="btn_ROI_select">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>ROI select</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_ROI_sd"/>
+       </item>
+       <item row="4" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_ROI_avg_Y"/>
+       </item>
+       <item row="3" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_ROI_avg_RGB"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_ROI_sd">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>STD:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_ROI_avg_Y">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>AVG Y:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="btn_ROI_clear">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>ROI clear</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QGroupBox" name="groupBox_Line">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Line</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <property name="horizontalSpacing">
+        <number>7</number>
+       </property>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btn_point_clear">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>line clear</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btn_point_set">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>line select</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_mark2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Point Distance:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLineEdit" name="lineEdit_distance">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="cbb_distance">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <property name="currentText">
+          <string>Coord</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Coord</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>RGB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>YUV</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>L*a*b*</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+   <zorder>groupBox_img</zorder>
+   <zorder>groupBox_neib</zorder>
+   <zorder>groupBox_Line</zorder>
+   <zorder>groupBox_ROI</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1434</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Open</string>
+    </property>
+    <addaction name="actionopen_file"/>
+    <addaction name="actionsave_resize_file"/>
+   </widget>
+   <widget class="QMenu" name="menuHistogram">
+    <property name="title">
+     <string>HistogramMap</string>
+    </property>
+    <addaction name="actionGlobalHistogram"/>
+    <addaction name="actionROI_Histogram"/>
+    <addaction name="actionLine_Histogram"/>
+   </widget>
+   <widget class="QMenu" name="menuGradientMap">
+    <property name="title">
+     <string>GradientMap</string>
+    </property>
+    <widget class="QMenu" name="menuY_channel_gradient">
+     <property name="title">
+      <string>Y channel gradient</string>
+     </property>
+     <addaction name="actionGradY_grad"/>
+     <addaction name="actionGradY_grad_x"/>
+     <addaction name="actionGradY_grad_y"/>
+    </widget>
+    <widget class="QMenu" name="menuB_channel_gradient">
+     <property name="title">
+      <string>B channel gradient</string>
+     </property>
+     <addaction name="actionGradB_grad"/>
+     <addaction name="actionGradB_grad_x"/>
+     <addaction name="actionGradB_grad_y"/>
+    </widget>
+    <widget class="QMenu" name="menuG_channel_gradient">
+     <property name="title">
+      <string>G channel gradient</string>
+     </property>
+     <addaction name="actionGradG_grad"/>
+     <addaction name="actionGradG_grad_x"/>
+     <addaction name="actionGradG_grad_y"/>
+    </widget>
+    <widget class="QMenu" name="menuR_channel_gradient">
+     <property name="title">
+      <string>R channel gradient</string>
+     </property>
+     <addaction name="actionGradR_grad"/>
+     <addaction name="actionGradR_grad_x"/>
+     <addaction name="actionGradR_grad_y"/>
+    </widget>
+    <addaction name="menuR_channel_gradient"/>
+    <addaction name="menuG_channel_gradient"/>
+    <addaction name="menuB_channel_gradient"/>
+    <addaction name="menuY_channel_gradient"/>
+   </widget>
+   <widget class="QMenu" name="menuColorChannelMap">
+    <property name="title">
+     <string>ColorChannelMap</string>
+    </property>
+    <widget class="QMenu" name="menuYUV">
+     <property name="title">
+      <string>YUV</string>
+     </property>
+     <addaction name="actionYUV_Y_channel"/>
+     <addaction name="actionYUV_U_channel"/>
+     <addaction name="actionYUV_V_channel"/>
+    </widget>
+    <widget class="QMenu" name="menuHSV">
+     <property name="title">
+      <string>HSV</string>
+     </property>
+     <addaction name="actionHSV_H_channel"/>
+     <addaction name="actionHSV_S_channel"/>
+     <addaction name="actionHSV_V_channel"/>
+    </widget>
+    <addaction name="menuYUV"/>
+    <addaction name="menuHSV"/>
+   </widget>
+   <widget class="QMenu" name="menuFrequencyDomainMap">
+    <property name="title">
+     <string>FrequencyDomainMap</string>
+    </property>
+    <widget class="QMenu" name="menuGlobal_FD">
+     <property name="title">
+      <string>Global FD</string>
+     </property>
+     <addaction name="actionGlobal_FD_R"/>
+     <addaction name="actionGlobal_FD_G"/>
+     <addaction name="actionGlobal_FD_B"/>
+     <addaction name="actionGlobal_FD_Y"/>
+    </widget>
+    <widget class="QMenu" name="menuROI_FD">
+     <property name="title">
+      <string>ROI FD</string>
+     </property>
+     <addaction name="actionFD_ROI_R"/>
+     <addaction name="actionFD_ROI_G"/>
+     <addaction name="actionFD_ROI_B"/>
+     <addaction name="actionFD_ROI_Y"/>
+    </widget>
+    <addaction name="menuGlobal_FD"/>
+    <addaction name="menuROI_FD"/>
+   </widget>
+   <widget class="QMenu" name="menuLinePlot">
+    <property name="title">
+     <string>PlotChart</string>
+    </property>
+    <addaction name="actionPlotVertical"/>
+    <addaction name="actionPlotHorizontal"/>
+    <addaction name="actionPlotSelectLine"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menuLinePlot"/>
+   <addaction name="menuHistogram"/>
+   <addaction name="menuGradientMap"/>
+   <addaction name="menuColorChannelMap"/>
+   <addaction name="menuFrequencyDomainMap"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionopen_file">
+   <property name="text">
+    <string>open file</string>
+   </property>
+  </action>
+  <action name="actionGlobalHistogram">
+   <property name="text">
+    <string>Global Histogram</string>
+   </property>
+  </action>
+  <action name="actionR_Channel">
+   <property name="text">
+    <string>YUV-U channel</string>
+   </property>
+  </action>
+  <action name="actionB_Channel">
+   <property name="text">
+    <string>YUV-V channel</string>
+   </property>
+  </action>
+  <action name="actionS_Channel">
+   <property name="text">
+    <string>S Channel</string>
+   </property>
+  </action>
+  <action name="actionV_Channel">
+   <property name="text">
+    <string>V Channel</string>
+   </property>
+  </action>
+  <action name="actionROI_Histogram">
+   <property name="text">
+    <string>ROI Histogram</string>
+   </property>
+  </action>
+  <action name="actionLine_Histogram">
+   <property name="text">
+    <string>SelectLine Histogram</string>
+   </property>
+  </action>
+  <action name="actionsave_resize_file">
+   <property name="text">
+    <string>save resize file</string>
+   </property>
+  </action>
+  <action name="actionPlotVertical">
+   <property name="text">
+    <string>PlotVertical</string>
+   </property>
+  </action>
+  <action name="actionPlotHorizontal">
+   <property name="text">
+    <string>PlotHorizontal</string>
+   </property>
+  </action>
+  <action name="actionPlotSelectLine">
+   <property name="text">
+    <string>PlotSelectLine</string>
+   </property>
+  </action>
+  <action name="actionYUV_Y_channel">
+   <property name="text">
+    <string>Y channel</string>
+   </property>
+  </action>
+  <action name="actionYUV_U_channel">
+   <property name="text">
+    <string>U channel</string>
+   </property>
+  </action>
+  <action name="actionYUV_V_channel">
+   <property name="text">
+    <string>V channel</string>
+   </property>
+  </action>
+  <action name="actionHSV_H_channel">
+   <property name="text">
+    <string>H channel</string>
+   </property>
+  </action>
+  <action name="actionHSV_S_channel">
+   <property name="text">
+    <string>S channel</string>
+   </property>
+  </action>
+  <action name="actionHSV_V_channel">
+   <property name="text">
+    <string>V channel</string>
+   </property>
+  </action>
+  <action name="actionGradY_grad">
+   <property name="text">
+    <string>grad</string>
+   </property>
+  </action>
+  <action name="actionGradY_grad_x">
+   <property name="text">
+    <string>grad-x</string>
+   </property>
+  </action>
+  <action name="actionGradY_grad_y">
+   <property name="text">
+    <string>grad-y</string>
+   </property>
+  </action>
+  <action name="actionGradB_grad">
+   <property name="text">
+    <string>grad</string>
+   </property>
+  </action>
+  <action name="actionGradB_grad_x">
+   <property name="text">
+    <string>grad-x</string>
+   </property>
+  </action>
+  <action name="actionGradB_grad_y">
+   <property name="text">
+    <string>grad-y</string>
+   </property>
+  </action>
+  <action name="actionGradG_grad">
+   <property name="text">
+    <string>grad</string>
+   </property>
+  </action>
+  <action name="actionGradG_grad_x">
+   <property name="text">
+    <string>grad-x</string>
+   </property>
+  </action>
+  <action name="actionGradG_grad_y">
+   <property name="text">
+    <string>grad-y</string>
+   </property>
+  </action>
+  <action name="actionGradR_grad">
+   <property name="text">
+    <string>grad</string>
+   </property>
+  </action>
+  <action name="actionGradR_grad_x">
+   <property name="text">
+    <string>grad-x</string>
+   </property>
+  </action>
+  <action name="actionGradR_grad_y">
+   <property name="text">
+    <string>grad-y</string>
+   </property>
+  </action>
+  <action name="actionGlobal_FD_R">
+   <property name="text">
+    <string>R FD</string>
+   </property>
+  </action>
+  <action name="actionGlobal_FD_G">
+   <property name="text">
+    <string>G FD</string>
+   </property>
+  </action>
+  <action name="actionGlobal_FD_B">
+   <property name="text">
+    <string>B FD</string>
+   </property>
+  </action>
+  <action name="actionGlobal_FD_Y">
+   <property name="text">
+    <string>Y FD</string>
+   </property>
+  </action>
+  <action name="actionFD_ROI_R">
+   <property name="text">
+    <string>R FD</string>
+   </property>
+  </action>
+  <action name="actionFD_ROI_G">
+   <property name="text">
+    <string>G FD</string>
+   </property>
+  </action>
+  <action name="actionFD_ROI_B">
+   <property name="text">
+    <string>B FD</string>
+   </property>
+  </action>
+  <action name="actionFD_ROI_Y">
+   <property name="text">
+    <string>Y FD</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
