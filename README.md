@@ -7,12 +7,13 @@
 
 ## Release
 
-<!-- <p align="left">
-  <a href="https://github.com/Dreamacro/clash/releases">
+<p align="left">
+  <a href="https://github.com/luimoli/ImgAnalyser/releases">
     <img src="https://img.shields.io/github/v/release/luimoli/ImgAnalyser?style=flat-square">
   </a>
-</p> -->
+</p>
 
+Now with executable file released.
 
 ## Prerequisites
 Use the following command to install this repo's prerequisites.
@@ -25,6 +26,5 @@ pip install -r requirements.txt
 python main.py
 ```
 
-
 ## Note
-This repo is specially for someone.
+This repository is specially for someone.
